@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+  <rect width="1100" height="760" fill="#f7f5f1"/>
+  <text x="40" y="42" font-family="Georgia, serif" font-size="22" fill="#1f2933">Diagrama de classes ˜ sistema escolar</text>
+  <text x="40" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#52606d">Associa??o (linha simples), agrega??o (losango vazado) e composi??o (losango preenchido)</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2933">
+    <rect x="40" y="100" width="280" height="210" rx="4" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
+    <rect x="40" y="100" width="280" height="36" fill="#1f2933"/>
+    <text x="180" y="124" text-anchor="middle" fill="#ffffff" font-weight="700">Escola</text>
+    <line x1="40" y1="164" x2="320" y2="164" stroke="#1f2933"/>
+    <text x="56" y="186">- nome: str</text>
+    <text x="56" y="206">- codigo: str</text>
+    <text x="56" y="226">- salas: SalaDeAula[*]</text>
+    <text x="56" y="246">- professores: Professor[*]</text>
+    <line x1="40" y1="260" x2="320" y2="260" stroke="#1f2933"/>
+    <text x="56" y="282">+ criar_sala()</text>
+    <text x="56" y="302">+ fechar()</text>
+
+    <rect x="760" y="110" width="300" height="190" rx="4" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
+    <rect x="760" y="110" width="300" height="36" fill="#1f2933"/>
+    <text x="910" y="134" text-anchor="middle" fill="#ffffff" font-weight="700">Professor</text>
+    <line x1="760" y1="174" x2="1060" y2="174" stroke="#1f2933"/>
+    <text x="776" y="196">- nome: str</text>
+    <text x="776" y="216">- registro: str</text>
+    <text x="776" y="236">- formacao: str</text>
+    <line x1="760" y1="250" x2="1060" y2="250" stroke="#1f2933"/>
+    <text x="776" y="272">+ vincular_escola()</text>
+    <text x="776" y="292">+ listar_escolas()</text>
+
+    <line x1="320" y1="200" x2="760" y2="200" stroke="#1f2933" stroke-width="1.5"/>
+    <text x="540" y="188" text-anchor="middle" font-size="12" fill="#52606d">associa??o</text>
+    <text x="332" y="190" font-size="12">*</text>
+    <text x="744" y="190" font-size="12">*</text>
+
+    <rect x="40" y="480" width="280" height="190" rx="4" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
+    <rect x="40" y="480" width="280" height="36" fill="#1f2933"/>
+    <text x="180" y="504" text-anchor="middle" fill="#ffffff" font-weight="700">SalaDeAula</text>
+    <line x1="40" y1="544" x2="320" y2="544" stroke="#1f2933"/>
+    <text x="56" y="566">- numero: str</text>
+    <text x="56" y="586">- capacidade: int</text>
+    <text x="56" y="606">- andar: int</text>
+    <line x1="40" y1="620" x2="320" y2="620" stroke="#1f2933"/>
+    <text x="56" y="642">+ descrever()</text>
+
+    <line x1="180" y1="334" x2="180" y2="480" stroke="#1f2933" stroke-width="1.5"/>
+    <polygon points="180,310 194,328 180,346 166,328" fill="#1f2933"/>
+    <text x="204" y="390" font-size="12" fill="#52606d">composi??o</text>
+    <text x="192" y="328" font-size="12">1</text>
+    <text x="188" y="472" font-size="12">1..*</text>
+
+    <rect x="420" y="480" width="280" height="190" rx="4" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
+    <rect x="420" y="480" width="280" height="36" fill="#1f2933"/>
+    <text x="560" y="504" text-anchor="middle" fill="#ffffff" font-weight="700">Aluno</text>
+    <line x1="420" y1="544" x2="700" y2="544" stroke="#1f2933"/>
+    <text x="436" y="566">- nome: str</text>
+    <text x="436" y="586">- matricula: str</text>
+    <text x="436" y="606">- endereco: Endereco</text>
+    <line x1="420" y1="620" x2="700" y2="620" stroke="#1f2933"/>
+    <text x="436" y="642">+ desvincular_endereco()</text>
+
+    <rect x="800" y="470" width="260" height="210" rx="4" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
+    <rect x="800" y="470" width="260" height="36" fill="#1f2933"/>
+    <text x="930" y="494" text-anchor="middle" fill="#ffffff" font-weight="700">Endereco</text>
+    <line x1="800" y1="534" x2="1060" y2="534" stroke="#1f2933"/>
+    <text x="816" y="556">- logradouro: str</text>
+    <text x="816" y="576">- numero: str</text>
+    <text x="816" y="596">- bairro: str</text>
+    <text x="816" y="616">- cidade: str</text>
+    <line x1="800" y1="630" x2="1060" y2="630" stroke="#1f2933"/>
+    <text x="816" y="652">+ formatar()</text>
+
+    <line x1="736" y1="575" x2="800" y2="575" stroke="#1f2933" stroke-width="1.5"/>
+    <polygon points="700,575 718,563 736,575 718,587" fill="#ffffff" stroke="#1f2933" stroke-width="1.5"/>
+    <text x="750" y="560" text-anchor="middle" font-size="12" fill="#52606d">agrega??o</text>
+    <text x="662" y="568" font-size="12">0..1</text>
+    <text x="804" y="568" font-size="12">1</text>
+  </g>
+
+  <text x="40" y="724" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#52606d">O losango fica no lado do todo: preenchido em Escola e vazado em Aluno. Professor e Escola n?o t?m losango.</text>
+</svg>
