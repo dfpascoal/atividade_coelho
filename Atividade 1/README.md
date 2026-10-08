@@ -43,4 +43,5 @@
 | `endereco.py` | Classe `Endereco` |
 | `entrada.py` | Funções de leitura de dados do usuário |
 | `menu.py` | Menu principal do sistema |
+| `sistema_escolar.py` | Versão em arquivo único com todas as classes e um exemplo de uso |
 | `diagrama_classes.svg` | Diagrama de classes |
